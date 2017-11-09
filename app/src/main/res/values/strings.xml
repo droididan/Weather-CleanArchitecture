@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="label_generic_error">Oops! Something went wrong!</string>
+    <string name="label_loading">Loading</string>
+    <string name="label_empty_products">List of products empty.</string>
+    <string name="label_empty_transactions">List of transactions empty.</string>
+    <string name="label_try_again">Try again!</string>
 </resources>

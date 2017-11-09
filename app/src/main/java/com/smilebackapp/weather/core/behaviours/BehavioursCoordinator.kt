@@ -18,11 +18,11 @@ class BehavioursCoordinator<T>(private val dealWithEmptyState: AssignEmptyCoordi
 
     override fun apply(upstream: Flowable<T>): Publisher<T> {
         return upstream
-                .compose(dealWithEmptyState)
-                .compose(loadingCoordination)
-                .compose(errorCoordination)
-                .compose(networkingCoordination)
-                .compose(toogleCoordination)
+                .compose(dealWithEmptyState)     // empty state
+                .compose(loadingCoordination)    // loading
+                .compose(errorCoordination)      // error
+                .compose(networkingCoordination) // network
+                .compose(toogleCoordination)     // refresh
     }
 
 }

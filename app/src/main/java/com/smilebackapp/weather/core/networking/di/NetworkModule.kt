@@ -17,12 +17,16 @@ open class NetworkModule {
 
     companion object {
         private val API_URL: String = ""
+        private val API_SECURED : String = ""
     }
 
     @Provides
     @Named("baseUrl")
     open fun providesBaseUrl(): String = API_URL
 
+    @Provides
+    @Named("secureApi")
+    open fun provideSecureApi() :String = API_SECURED
 
 
     @Provides
@@ -54,6 +58,18 @@ open class NetworkModule {
     @Named("retrofitDefault")
     fun providesRetrofit(rxJava2CallAdapterFactory: RxJava2CallAdapterFactory,
                          @Named("baseUrl") baseUrl: String, okHttpClient: OkHttpClient,
+                         gsonConverterFactory: GsonConverterFactory): Retrofit
+            = Retrofit.Builder()
+            .client(okHttpClient)
+            .addCallAdapterFactory(rxJava2CallAdapterFactory)
+            .addConverterFactory(gsonConverterFactory)
+            .baseUrl(baseUrl)
+            .build()
+
+    @Provides
+    @Named("securedRetrofit")
+    fun providesSecuredRetrofit(rxJava2CallAdapterFactory: RxJava2CallAdapterFactory,
+                         @Named("securedRetrofit") baseUrl: String, okHttpClient: OkHttpClient,
                          gsonConverterFactory: GsonConverterFactory): Retrofit
             = Retrofit.Builder()
             .client(okHttpClient)

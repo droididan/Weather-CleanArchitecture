@@ -1,4 +1,4 @@
-package com.uzias.starwarsshop.util
+package com.smilebackapp.weather.core.util
 
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation

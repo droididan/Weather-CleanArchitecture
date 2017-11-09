@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextAppearance.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="TextAppearance.Button.Primary" parent="TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/ripple_primary_button</item>
+        <item name="android:textColor">@color/buttonTextColorPrimary</item>
+    </style>
+
+
 </resources>

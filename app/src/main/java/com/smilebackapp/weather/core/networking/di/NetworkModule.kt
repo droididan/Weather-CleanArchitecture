@@ -2,6 +2,7 @@ package com.smilebackapp.weather.core.networking.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.smilebackapp.weather.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.Interceptor
@@ -16,7 +17,7 @@ import javax.inject.Named
 open class NetworkModule {
 
     companion object {
-        private val API_URL: String = ""
+        private val API_URL: String = BuildConfig.SERVER_URL
         private val API_SECURED : String = ""
     }
 

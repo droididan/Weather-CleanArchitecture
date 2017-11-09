@@ -10,7 +10,6 @@ import com.smilebackapp.weather.R
 import com.smilebackapp.weather.core.presentation.BaseFragment
 import com.smilebackapp.weather.core.presentation.BasePresenter
 import com.smilebackapp.weather.core.presentation.BaseView
-import com.smilebackapp.weather.weather.data.datasource.networking.json.WeatherResponseItem
 import com.smilebackapp.weather.weather.presentation.adapter.WeatherAdapter
 import com.smilebackapp.weather.weather.presentation.model.PresentationWeather
 import com.smilebackapp.weather.weather.presentation.presenter.WeatherPresenter
@@ -50,7 +49,7 @@ class WeatherFragment : BaseFragment(), WeatherView, SwipeRefreshLayout.OnRefres
         weatherAdapter.setWeather(list)
     }
 
-    override fun onWeatherClicked(item: WeatherResponseItem) {
+    override fun onWeatherClicked(item: PresentationWeather) {
         presenter.navigateWeatherDetails()
     }
 

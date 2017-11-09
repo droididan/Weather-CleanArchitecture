@@ -31,7 +31,7 @@ class App : Application(), HasActivityInjector {
 
     private fun initTimber() {
         if (BuildConfig.DEBUG) {
-            Timber.plant(Timber.asTree())
+            Timber.plant(timber.log.Timber.DebugTree())
         }
     }
 

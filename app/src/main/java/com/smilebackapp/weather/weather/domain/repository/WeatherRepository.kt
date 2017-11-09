@@ -1,6 +1,6 @@
 package com.smilebackapp.weather.weather.domain.repository
 
-import com.smilebackapp.weather.weather.data.datasource.networking.json.WeatherResponse
+import com.smilebackapp.weather.weather.domain.model.Weather
 import io.reactivex.Flowable
 
 /**
@@ -8,5 +8,5 @@ import io.reactivex.Flowable
  *
  */
 interface WeatherRepository {
-    fun getWeather(cityName: String): Flowable<WeatherResponse>
+    fun getWeather(cityName: String): Flowable<Weather>
 }

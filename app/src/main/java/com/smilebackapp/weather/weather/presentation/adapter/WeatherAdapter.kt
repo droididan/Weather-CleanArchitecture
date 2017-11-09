@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.github.ajalt.timberkt.Timber
 import com.smilebackapp.weather.R
-import com.smilebackapp.weather.weather.data.datasource.networking.json.WeatherResponseItem
 import com.smilebackapp.weather.weather.presentation.model.PresentationWeather
 
 /**
@@ -29,7 +28,9 @@ class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         if (holder is WeatherCellHolder) {
             val weather = weatherResponse[position]
             holder.bind(weather)
-            holder.itemView.setOnClickListener {  listener.onWeatherClicked(weather)}
+            holder.itemView.setOnClickListener {
+                listener.onWeatherClicked(weather)
+            }
         }
     }
 
@@ -62,6 +63,6 @@ class WeatherAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     interface WeatherListener {
-        fun onWeatherClicked(item : WeatherResponseItem)
+        fun onWeatherClicked(item: PresentationWeather)
     }
 }

@@ -47,6 +47,10 @@ android {
         versionCode android_version_code
         versionName android_version_name
         testInstrumentationRunner android_test_instrumentation_runner
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField 'String', 'API_KEY', "\"573a76a66eda6a48da9ffb893388a35c\""
+        buildConfigField 'String', 'SERVER_URL', "\"http://api.openweathermap.org/data/2.5/\""
     }
     buildTypes {
         release {

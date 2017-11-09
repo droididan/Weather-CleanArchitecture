@@ -1,7 +1,7 @@
 package com.smilebackapp.weather.weather.data.datasource.networking.json
 
 
-data class WeatherResponse(
+data class JsonWeatherResponse(
         val cod: Int,
         val message: Float,
         val cnt: Int,

@@ -10,8 +10,6 @@ abstract class ActivitiesBuilder {
     /**
      * Add here the the module and the target [Fragment / Activity]
      */
-
     @ContributesAndroidInjector(modules = arrayOf(WeatherModule::class))
     abstract fun weatherFragment(): WeatherFragment
-
 }
